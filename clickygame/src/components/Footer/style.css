@@ -1,0 +1,7 @@
+.footer{
+    flex-shrink: 0;
+    background-color: green;
+    color: black;
+    text-align: center;
+    width: 100%;
+}

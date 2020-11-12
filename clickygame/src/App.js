@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import friends from "./friends.json";
-import Jumbotron from "./components/Jumbotron";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 class App extends Component {
+  // Setting this.state.friends to the friends.json file
+    // this.state.clicked is a set that keeps track of what south park characters have been clicked
+    // this.state.highScore keeps track of your score
   state = {
     friends: friends,
     score: 0,
@@ -15,6 +18,7 @@ class App extends Component {
   };
 
   setClick = id => {
+    //select your friends with a specific id in this.state.friends
     const selectFriends = this.state.friends.find(friends => friends.id === id);
     if (this.state.clicked.has(selectFriends)) {
       this.setState(state => ({
@@ -49,8 +53,6 @@ class App extends Component {
       <Wrapper>
         <Navbar title="Clicky Game" message={this.state.message} score={this.state.clicked.size} bestScore={this.state.bestScore}></Navbar>
 
-        <Jumbotron>Jumbotron</Jumbotron>
-
         <div className="container">
           <div className="row">
             {this.state.friends.map(friends => (
@@ -65,7 +67,7 @@ class App extends Component {
             ))}
           </div>
         </div>
-
+        <Footer text="South Park Clicky Clicky Clicky Game"></Footer>      
       </Wrapper>
     );
   }
