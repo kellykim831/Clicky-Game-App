@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Bebe",
+    "image": "./assets/images/bebe.png",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "name": "Butters",
+    "image": "./assets/images/butters.png",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "name": "Clyde",
+    "image": "./assets/images/clyde.png",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "name": "Craig",
+    "image": "./assets/images/craig.png",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "name": "Eric",
+    "image": "./assets/images/eric.png",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "name": "Jimmy",
+    "image": "./assets/images/jimmy.png",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "name": "Kenny",
+    "image": "./assets/images/kenny.png",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "name": "Kyle",
+    "image": "./assets/images/kyle.png",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "name": "Token",
+    "image": "./assets/images/token.png",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "name": "Tweek",
+    "image": "./assets/images/tweek.png",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "name": "Wendy",
+    "image": "./assets/images/wendy.png",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "name": "Stan",
+    "image": "./assets/images/stan.png",
+    "clicked": false
+  }
+]
