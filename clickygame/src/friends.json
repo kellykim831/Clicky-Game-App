@@ -2,73 +2,73 @@
   {
     "id": 1,
     "name": "Bebe",
-    "image": "./assets/images/bebe.png",
+    "image": "./assets/bebe.png",
     "clicked": false
   },
   {
     "id": 2,
     "name": "Butters",
-    "image": "./assets/images/butters.png",
+    "image": "./assets/butters.png",
     "clicked": false
   },
   {
     "id": 3,
     "name": "Clyde",
-    "image": "./assets/images/clyde.png",
+    "image": "./assets/clyde.png",
     "clicked": false
   },
   {
     "id": 4,
     "name": "Craig",
-    "image": "./assets/images/craig.png",
+    "image": "./assets/craig.png",
     "clicked": false
   },
   {
     "id": 5,
     "name": "Eric",
-    "image": "./assets/images/eric.png",
+    "image": "./assets/eric.png",
     "clicked": false
   },
   {
     "id": 6,
     "name": "Jimmy",
-    "image": "./assets/images/jimmy.png",
+    "image": "./assets/jimmy.png",
     "clicked": false
   },
   {
     "id": 7,
     "name": "Kenny",
-    "image": "./assets/images/kenny.png",
+    "image": "./assets/kenny.png",
     "clicked": false
   },
   {
     "id": 8,
     "name": "Kyle",
-    "image": "./assets/images/kyle.png",
+    "image": "./assets/kyle.png",
     "clicked": false
   },
   {
     "id": 9,
     "name": "Token",
-    "image": "./assets/images/token.png",
+    "image": "./assets/token.png",
     "clicked": false
   },
   {
     "id": 10,
     "name": "Tweek",
-    "image": "./assets/images/tweek.png",
+    "image": "./assets/tweek.png",
     "clicked": false
   },
   {
     "id": 11,
     "name": "Wendy",
-    "image": "./assets/images/wendy.png",
+    "image": "./assets/wendy.png",
     "clicked": false
   },
   {
     "id": 12,
     "name": "Stan",
-    "image": "./assets/images/stan.png",
+    "image": "./assets/stan.png",
     "clicked": false
   }
 ]
