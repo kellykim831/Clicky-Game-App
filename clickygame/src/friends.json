@@ -1,74 +1,62 @@
 [
   {
     "id": 1,
-    "name": "Bebe",
-    "image": "./assets/bebe.png",
-    "clicked": false
+    "image": "https://vignette2.wikia.nocookie.net/southpark/images/2/2b/2-436.png/revision/latest?cb=20160402112834",
+    "name": "Bebe"
   },
   {
     "id": 2,
-    "name": "Butters",
-    "image": "./assets/butters.png",
-    "clicked": false
+    "image": "https://lh6.googleusercontent.com/-Ne96C8BxZnc/UlbGUazKv8I/AAAAAAAAAA8/tIxZ8urGFlo/s0-d/butters_by_invadersponge-d37tnlp.png",
+    "name": "Butters"
   },
   {
     "id": 3,
-    "name": "Clyde",
-    "image": "./assets/clyde.png",
-    "clicked": false
+    "image": "http://southparkstudios.mtvnimages.com/shared/characters/kids/clyde-donovan.png",
+    "name": "Clyde"
   },
   {
     "id": 4,
-    "name": "Craig",
-    "image": "./assets/craig.png",
-    "clicked": false
+    "image": "http://southparkstudios.mtvnimages.com/shared/characters/kids/craig-tucker.png",
+    "name": "Craig"
   },
   {
     "id": 5,
-    "name": "Eric",
-    "image": "./assets/eric.png",
-    "clicked": false
+    "image": "http://southparkstudios.mtvnimages.com/shared/characters/kids/eric-cartman.png",
+    "name": "Eric"
   },
   {
     "id": 6,
-    "name": "Jimmy",
-    "image": "./assets/jimmy.png",
-    "clicked": false
+    "image": "http://ranger.gamebanana.com/img/ico/sprays/31_jimmy_3.png",
+    "name": "Jimmy"
   },
   {
     "id": 7,
-    "name": "Kenny",
-    "image": "./assets/kenny.png",
-    "clicked": false
+    "image": "http://southparkstudios.mtvnimages.com/shared/characters/kids/kenny-mccormick.png",
+    "name": "Kenny"
   },
   {
     "id": 8,
-    "name": "Kyle",
-    "image": "./assets/kyle.png",
-    "clicked": false
+    "image": "http://images3.wikia.nocookie.net/__cb20111214222804/southpark/images/7/70/165px-KyleBroflovski.png",
+    "name": "Kyle"
   },
   {
     "id": 9,
-    "name": "Token",
-    "image": "./assets/token.png",
-    "clicked": false
+    "image": "http://southparkstudios.mtvnimages.com/shared/characters/alter-egos/token-black-the-healer.png",
+    "name": "Token"
   },
   {
     "id": 10,
-    "name": "Tweek",
-    "image": "./assets/tweek.png",
-    "clicked": false
+    "image": "http://southparkstudios.mtvnimages.com/shared/characters/kids/tweek-tweak.png",
+    "name": "Tweek"
   },
   {
     "id": 11,
-    "name": "Wendy",
-    "image": "./assets/wendy.png",
-    "clicked": false
+    "image": "http://img3.wikia.nocookie.net/__cb20111229175657/southpark/images/9/93/Wendy-happy.png",
+    "name": "Wendy"
   },
   {
     "id": 12,
-    "name": "Stan",
-    "image": "./assets/stan.png",
-    "clicked": false
+    "image": "http://southparkstudios.mtvnimages.com/shared/characters/kids/stan-marsh.png",
+    "name": "Stan"
   }
 ]
