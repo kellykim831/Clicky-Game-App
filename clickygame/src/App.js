@@ -9,7 +9,7 @@ import CharacterList from './components/CharacterList';
 
 class App extends Component {
     state = {
-      Cards,
+      cards,
       clickedCard: [],
       score: 0,
       highScore: 0,
@@ -25,7 +25,7 @@ imageClick = id => {
 
     if (CardAlreadyClicked) {
       this.setState({
-        Cards: this.state.cards.sort(this.randomGenerator),
+        cards: this.state.cards.sort(this.randomGenerator),
         clickedCard: [],
         score: 0,
         highScore: 0,
@@ -39,7 +39,7 @@ imageClick = id => {
       this.setState(
         {
           cards: this.state.cards.sort(this.randomGenerator),
-          clickedCard: this.state.clickedcard.concat(currentCard),
+          clickedCard: this.state.clickedCard.concat(currentCard),
           score: score + 1,
           highScore: Math.max(this.state.highScore, score),
           isGuessed: true

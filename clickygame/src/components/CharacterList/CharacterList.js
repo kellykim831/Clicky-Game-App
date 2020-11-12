@@ -1,6 +1,4 @@
 import React from 'react';
-
-import './CharacterList.css';
 import CharacterItem from '../CharacterItem';
 
 const CharacterList = props => (
