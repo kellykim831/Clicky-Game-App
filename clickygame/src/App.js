@@ -1,75 +1,80 @@
-import React, { Component } from 'react';
-import Cards from './southpark.json';
-import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import CharacterList from './components/CharacterList';
+import React, { Component } from "react";
+import FriendCard from "./components/FriendCard";
+import Wrapper from "./components/Wrapper";
+import friends from "./friends.json";
+import Jumbotron from "./components/Jumbotron";
+import Navbar from "./components/Navbar";
 
-//set state to 0
+
 
 class App extends Component {
-    state = {
-      cards,
-      clickedCard: [],
-      score: 0,
-      highScore: 0,
-      isGuessed: false
-    };
-  
-    randomGenerator = (a, b) => (Math.random() > 0.5 ? -1 : 1);
-//onclcick for images
-imageClick = id => {
-    const currentCard = id;
-    const CardAlreadyClicked =
-      this.state.clickedCard.indexOf(currentCard) > -1;
-
-    if (CardAlreadyClicked) {
-      this.setState({
-        cards: this.state.cards.sort(this.randomGenerator),
-        clickedCard: [],
-        score: 0,
-        highScore: 0,
-        isGuessed: false
-      });
-      alert('You lose. Play again?');
-    } else {
-      let score = this.state.score;
-      let cards = this.state.cards;
-
-      this.setState(
-        {
-          cards: this.state.cards.sort(this.randomGenerator),
-          clickedCard: this.state.clickedCard.concat(currentCard),
-          score: score + 1,
-          highScore: Math.max(this.state.highScore, score),
-          isGuessed: true
-        },
-        () => {
-          if (this.state.score === cards.length) {
-            alert('Yay! You Win!');
-            this.setState({
-              cards: this.state.cards.sort(this.randomGenerator),
-              clickedCard: [],
-              score: 0,
-              highScore: 0
-            });
-          }
-        }
-      );
-    }
+  state = {
+    friends: friends,
+    score: 0,
+    bestScore: 0,
+    message: "Click a character to test your memory!",
+    clicked: new Set()
   };
 
-  render() {
-    const { cards, score, highScore, isGuessed } = this.state;
+  setClick = id => {
+    const selectFriends = this.state.friends.find(friends => friends.id === id);
+    if (this.state.clicked.has(selectFriends)) {
+      // End game and set this.state to include a new set that is empty to start a new game
+      // Set message to display you guessed incorrect
+      this.setState(state => ({
+        ...state,
+        clicked: new Set(),
+        message: "Sorry, you guessed incorrect!"
+      }))
+    } else {
+      // If this.state.clicked doesn't include the slected friend image, add the friend image to the clicked set 
+      // Update high score to reflect either the number of correct friends selected or the existing high score, whichever is larger
+      // Set mesage to display you guessed correct
+      this.setState(state => ({
+        ...state,
+        friends: this.shuffleFriends(state.friends),
+        clicked: state.clicked.add(selectFriends),
+        bestScore: Math.max(state.clicked.size, state.bestScore),
+        message: "You're still in the game!"
+      }))
+    }
+  };
+  
+  shuffleFriends = (friends) => {
+    for (let i = friends.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let temp = friends[i];
+      friends[i] = friends[j];
+      friends[j] = temp;
+    }
+    return friends
+  }
 
+
+  // Map over this.state.friends and render a FriendCard component for each friend object
+  render() {
     return (
-      <div className='application'>
-        <Header score={score} highScore={highScore} isGuessed={isGuessed} />
-        <div className='wrapper'>
-          <CharacterList cards={cards} imageClick={this.imageClick} />
+      <Wrapper>
+        <Navbar title="Memory Clicky Game" message={this.state.message} score={this.state.clicked.size} bestScore={this.state.bestScore}></Navbar>
+
+        <Jumbotron>Jumbotron</Jumbotron>
+
+        <div className="container">
+          <div className="row">
+            {this.state.friends.map(friends => (
+              <FriendCard
+                onClick={() => this.setClick(friends.id)}
+                id={friends.id}
+                key={friends.id}
+                name={friends.name}
+                image={friends.image}
+              />
+
+            ))}
+          </div>
         </div>
-        <Footer />
-      </div>
+
+      </Wrapper>
     );
   }
 }
